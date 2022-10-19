@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="app.js" ></script>
     <script defer src="lib.js" ></script>
+    <script src="https://unpkg.com/imask"></script>
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -24,15 +28,33 @@
         </div>
     </main>
     <footer class="footer">
-        <!-- в Фотошопе изменитрь прозрачность бэкграунда -->
+        
         <div class="form-footer">
             <div class="container">
-
+                <form action="" class="form">
+                    <h1>Остались вопросы?</h1>
+                    <label for="">Заполните небольшую форму и наш менеджер <br>свяжется с вами в ближайшее время</label> <br>
+                    <div class="local">
+                        <input type="text" name="name" id="name" autocomplete="off" value="Имя" onfocus="this.value=''" onblur="this.value=value">
+                        <div class="rectangle"></div>
+                    </div>
+                    <div class="local">
+                        <p>Телефон</p>
+                        <input type="text" name="number" id="selector" autocomplete="off" value="909   " >
+                        <div class="rectangle"></div>
+                    </div>
+                    <div class="local">
+                        <input type="text" name="email"  autocomplete="off" value="Email" onfocus="this.value=''" onblur="this.value=value">
+                        <div class="rectangle"></div>
+                    </div>
+                    <input type="submit" class="submitB">
+                    
+                </form>
             </div>
         </div>
         <div class="footer-menu">
             <div class="container">
-
+                
             </div>
         </div>
         

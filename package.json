@@ -25,5 +25,8 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-sprite": "^2.0.0",
     "gulp-uglify-es": "^3.0.0"
+  },
+  "dependencies": {
+    "imask": "^6.4.3"
   }
 }
