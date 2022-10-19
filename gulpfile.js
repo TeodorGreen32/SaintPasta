@@ -10,6 +10,8 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify-es').default;
 const notify = require('gulp-notify');
 const sourceMaps = require('gulp-sourcemaps');
+const image = require('gulp-image');
+
 
 const clean = () => {
     return del('dist');
@@ -59,6 +61,17 @@ const svgSprites = () => {
 
 
 }
+const images =() =>{
+    return src([
+        'src/image/**/*.jpg',
+        'src/image/**/*.jpeg',
+        'src/image/**/*.png',
+        'src/image/*.svg'
+    ])
+    .pipe(image())
+    .pipe(dest('dist/images'))
+    .pipe(browserSync.stream())
+}
 
 const scripts = () =>{
     return src([
@@ -95,11 +108,17 @@ const watchFile =()=>{
     watch('src/style/**/*.css',mystyles);
     watch('src/js/**/*.js',scripts);
     watch('src/resources/**',resources);
+    watch([
+        'src/image/**/*.jpg',
+        'src/image/**/*.jpeg',
+        'src/image/**/*.png',
+        'src/image/*.svg'
+    ],images);
 }
 //Экспортируем таски
 exports.clean = clean;
 exports.resources = resources;
 exports.scripts = scripts;
 exports.html = htmlMinify;
-exports.default = series(clean,mystyles,htmlMinify,svgSprites,scripts,resources,watchFile) ;
+exports.default = series(clean,mystyles,htmlMinify,svgSprites,images,scripts,resources,watchFile) ;
 
