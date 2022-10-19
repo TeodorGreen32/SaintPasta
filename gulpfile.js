@@ -11,6 +11,8 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify-es').default;
 const notify = require('gulp-notify');
 const sourceMaps = require('gulp-sourcemaps');
+const image = require('gulp-image');
+
 
 const clean = () => {
     return del('dist');
@@ -113,6 +115,12 @@ const watchFile =()=>{
     watch('src/style/**/*.css',mystyles);
     watch('src/js/**/*.js',scripts);
     watch('src/resources/**',resources);
+    watch([
+        'src/image/**/*.jpg',
+        'src/image/**/*.jpeg',
+        'src/image/**/*.png',
+        'src/image/*.svg'
+    ],images);
 }
 //Экспортируем таски
 exports.clean = clean;
