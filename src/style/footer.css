@@ -106,3 +106,23 @@ footer{
     border: none;
     transition: 0.250s ease;
 }
+.footer-main-menu input{
+    background-color: #2d313400;
+    outline: none;
+    border: 1px solid #ffffff;
+    padding: 10px 20px;
+    min-width: 420px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #DADADA;
+}
+.footer-menu .container{
+    width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   
+}

@@ -5,7 +5,6 @@ const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 const svgSprite =require ("gulp-svg-sprite");
 const del = require('del');
-const image = require('gulp-image');
 const browserSync=require("browser-sync").create();
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify-es').default;
