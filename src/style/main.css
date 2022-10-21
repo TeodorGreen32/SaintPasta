@@ -54,9 +54,10 @@ html{
     font: inherit;
   }
   .container{
-    margin: 0 auto;
+      margin: 0 auto; 
     max-width: 1230px;
-    padding: 0px 15px;
-    height: auto;
+     padding: 0px 15px; 
+    height: auto; 
     
   }
+  
