@@ -106,7 +106,15 @@ footer{
     border: none;
     transition: 0.250s ease;
 }
+.footer-main-menu .input-castom{
+    background: url("images/footer-search.png") no-repeat;
+    background-size: 15px;
+    background-position:390px;
+    
+}
+
 .footer-main-menu input{
+   
     background-color: #2d313400;
     outline: none;
     border: 1px solid #ffffff;
@@ -118,11 +126,96 @@ footer{
     font-size: 14px;
     line-height: 19px;
     color: #DADADA;
+    transition: 0.5s ease-in-out;
+    
 }
-.footer-menu .container{
+.footer-main-menu input:focus{
+
+    outline: none;
+    color: #D38B13;
+}
+.footer-main-menu *{
+    
+    margin: 15px 0px;
+    
+}
+
+.footer-menu .container-footer{
     width: 100%;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
+   margin-top: 40px;
    
+   
+}
+.footer-cont-menu .contact div{
+    display:inline-flex;
+    
+    
+    margin: 25px;
+    
+    color: white;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.footer-cont-menu .callback{
+    
+    margin-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.callback .social{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    max-width: 120px;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+.callback .number{
+    display: inline-flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    color: white;
+}
+.callback .number button{
+    background-color: white;
+    border: 1px solid rgba(17, 17, 17, 0);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #2D2D2D;
+    height: 46px;
+    width: 175px;
+    transition: 0.250s ease-in-out;
+}
+.callback .number button:hover{
+    background-color: #D38B13;
+    color: white;
+}
+.footer-menu .container .Rectangle{
+    border: 1px solid #777E89;
+}
+.footer-menu .container .container-copyr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    color: #777E89;
 }
