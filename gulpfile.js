@@ -10,7 +10,7 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify-es').default;
 const notify = require('gulp-notify');
 const sourceMaps = require('gulp-sourcemaps');
-
+const image = require('gulp-image');
 
 const clean = () => {
     return del('dist');
