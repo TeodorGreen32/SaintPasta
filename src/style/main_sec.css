@@ -1,0 +1,311 @@
+.section_4 {
+    max-width: 1920px;
+    height: 895px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.grid_container {
+
+    /* margin:0 auto; */
+     /* width: 1920px;  */
+    display: grid;
+    grid-template-columns: repeat(3, 640px);
+    grid-template-rows: repeat(2, 447px);
+}
+
+.grid_page1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.grid_page2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.grid_page3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.grid_page4 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.grid_page5 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+}
+
+.grid_page6 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.section_5 {
+    padding-top: 50px;
+    padding-bottom: 150px;
+    width: 1230px;
+    /* height: 729px; */
+    margin: 0 auto;
+}
+
+.grid_buttons {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(13, 100px);
+    grid-template-rows: 44px;
+}
+
+.button1_div_s5 {
+    grid-column: 1/2;
+
+    /* padding: 10px; */
+    /* background-color: #DC780B; */
+    /* color: white; */
+    /* border-radius: 10px; */
+    /* border-color: white; */
+}
+
+.button2_div_s5 {
+    grid-column: 3/4;
+
+}
+
+.button3_div_s5 {
+    grid-column: 9/10;
+
+}
+
+.button1_s5 {
+    border-radius: 10px;
+    padding: 5px;
+    width: 145px;
+    height: 30px;
+
+
+}
+
+.button2_s5 {
+    border: none;
+    background-color: white;
+    width: 145px;
+    height: 30px;
+}
+
+.button3_s5 {
+    border: none;
+    background-color: white;
+    color: #AD8442;
+    width: 169px;
+    height: 30px;
+}
+
+
+.grid_buttons2 {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(20, 50px);
+    grid-template-rows: 27px;
+}
+
+.button2_1_s5 {
+    border: none;
+    background-color: white;
+    width: 81px;
+    height: 27px;
+}
+
+.button2_2_s5 {
+    border: none;
+    background-color: white;
+    width: 63px;
+       height: 27px;
+}
+
+.button2_3_s5 {
+    border: none;
+    background-color: white;
+    width: 159px;
+           height: 27px;
+}
+.button2_4_s5{
+    border: none;
+       background-color: white;
+       width: 214px;
+       height: 27px;
+     }
+
+.button1_div2_s5 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.button2_div2_s5 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.button3_div2_s5 {
+    grid-column: 5/6;
+    grid-row: 1/2;
+}
+.button4_div2_s5 {
+    grid-column: 8/9;
+    grid-row: 1/2;
+}
+
+
+.cards_main{
+    padding-top: 50px;
+    /* margin-bottom: 200px; */
+    display: grid;
+    grid-template-columns: repeat(4,278px);
+    grid-template-rows: 495px;
+    grid-gap: 25px;
+}
+.card1{
+    grid-column:1/2 ;
+    grid-row:1/2 ;
+}
+.card2{
+    grid-column:2/3 ;
+    grid-row:1/2 ;
+}
+.card3{
+    grid-column:3/4 ;
+    grid-row:1/2 ;
+}
+.card4{
+    grid-column:4/5 ;
+    grid-row:1/2 ;
+}
+.card1_grid_buttons{
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,75px);
+    grid-template-rows: 46px ;
+}
+.card1_div_button1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.card1_div_button2{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.card1_button_button1{
+    width: 107px;
+    height: 46px;
+    background-color: #D38B13;
+    border: none;
+    color: white;
+}
+.card1_button_button2{
+    width: 107px;
+    height: 46px;
+    background-color: white;
+    border: none;
+    
+}
+
+
+
+.card2_grid_buttons{
+    padding-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(3,75px);
+    grid-template-rows: 46px ;
+    
+}
+.card2_div_button1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.card2_div_button2{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.card2_button_button1{
+    width: 107px;
+    height: 46px;
+    background-color: #D38B13;
+    border: none;
+    color: white;
+}
+.card2_button_button2{
+    width: 107px;
+    height: 46px;
+    background-color: white;
+    border: none;
+    
+    
+}
+
+
+
+.card3_grid_buttons{
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3,75px);
+    grid-template-rows: 46px ;
+    
+}
+.card3_div_button1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.card3_div_button2{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.card3_button_button1{
+    width: 107px;
+    height: 46px;
+    background-color: #D38B13;
+    border: none;
+    color: white;
+}
+.card3_button_button2{
+    width: 107px;
+    height: 46px;
+    background-color: white;
+    border: none;
+    
+    
+}
+
+
+.card4_grid_buttons{
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3,75px);
+    grid-template-rows: 46px ;
+    
+}
+.card4_div_button1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.card4_div_button2{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.card4_button_button1{
+    width: 107px;
+    height: 46px;
+    background-color: #D38B13;
+    border: none;
+    color: white;
+}
+.card4_button_button2{
+    width: 107px;
+    height: 46px;
+    background-color: white;
+    border: none;
+    
+    
+}
