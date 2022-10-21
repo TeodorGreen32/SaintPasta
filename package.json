@@ -26,6 +26,7 @@
     "gulp-uglify-es": "^3.0.0"
   },
   "dependencies": {
+    "imask": "^6.4.3",
     "slick-carousel": "^1.8.1"
   }
 }
