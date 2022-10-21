@@ -1,13 +1,8 @@
 .section_4 {
-    width: 1920px;
+    max-width: 1920px;
     height: 895px;
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    /* text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto; */
+    margin: 0 auto;
 }
 
 .grid_container {
