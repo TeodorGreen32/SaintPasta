@@ -1,0 +1,30 @@
+.pasta {
+  position: relative;
+  background: url('images/content/pasta/pasta-bg.png') right -40px top -10px no-repeat, linear-gradient(90deg, #66536B 40%, #fff 35%);
+}
+
+.pasta__inner {
+  display: flex;
+  padding: 130px 0;
+  min-height: 640px;
+}
+
+.pasta__img {
+  position: absolute;
+  bottom: -69px;
+  right: calc(50% + 75px);
+}
+
+.pasta__title {
+  max-width: 391px;
+  margin-bottom: 30px;
+}
+
+.pasta__text {
+  margin-left: 50%;
+  max-width: 505px;
+}
+
+.pasta__description+.pasta__description {
+  margin-top: 40px;
+}
