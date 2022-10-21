@@ -1,0 +1,38 @@
+.banner__slider-item {
+  height: 100vh;
+  display: block;
+}
+
+.banner__slider-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.banner .slick-slider {
+  line-height: 0;
+}
+
+.banner .slick-dots {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 41px;
+  transform: translateX(-50%);
+  font-size: 0;
+}
+
+.banner [role="tab"] {
+  width: 16px;
+  height: 16px;
+  margin: 0 13px;
+  border: none;
+  background: rgba(102, 83, 107, 0.72);
+  border-radius: 50%;
+  transition: .2s;
+}
+
+.banner .slick-active button {
+  background: #ECDCBD;
+}

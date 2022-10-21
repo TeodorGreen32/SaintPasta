@@ -1,131 +1,106 @@
-const {src, dest, series, watch} = require('gulp');
-const concat = require('gulp-concat');
-const htmlmin = require("gulp-htmlmin");
-const autoprefixer = require("gulp-autoprefixer");
-const cleanCSS = require("gulp-clean-css");
-const svgSprite =require ("gulp-svg-sprite");
-const del = require('del');
-const image = require('gulp-image');
-const browserSync=require("browser-sync").create();
-const babel = require('gulp-babel');
-const uglify = require('gulp-uglify-es').default;
-const notify = require('gulp-notify');
-const sourceMaps = require('gulp-sourcemaps');
-const image = require('gulp-image');
+const { src, dest, series, watch } = require('gulp');
+const concat = require('gulp-concat'),
+  htmlMin = require('gulp-htmlmin'),
+  cleanCSS = require('gulp-clean-css'),
+  browserSync = require('browser-sync').create(),
+  svgSprite = require('gulp-svg-sprite'),
+  image = require('gulp-image'),
+  babel = require('gulp-babel'),
+  uglify = require('gulp-uglify-es').default,
+  notify = require('gulp-notify'),
+  sourceMaps = require('gulp-sourcemaps'),
+  del = require('del'),
+  autoprefixer = require('gulp-autoprefixer');
 
+const clean = () => del('dist');
 
-const clean = () => {
-    return del('dist');
+// создаем таск для стилей
+const styles = () => src([
+  'node_modules/slick-carousel/slick/slick.css',
+  'src/style/**/*.css'
+])
+  .pipe(concat('style.css'))
+  .pipe(autoprefixer({
+    overrideBrowserslist: ['last 2 versions', '> 5%'],
+    cascade: false,
+  }))
+  .pipe(cleanCSS({
+    level: 2,
+  }))
+  .pipe(dest('dist'))
+  .pipe(browserSync.stream());
+
+//создаем такс для html
+const htmlMinify = () => src('src/**/*.html')
+  .pipe(htmlMin({
+    collapseWhiteSpace: true,
+  }))
+  .pipe(dest('dist'))
+  .pipe(browserSync.stream());
+
+const svgSprites = () => src('src/images/svg/**/*.svg')
+  .pipe(svgSprite({
+    mode: {
+      stack: {
+        sprite: '../sprite.svg'
+      }
+    }
+  }))
+  .pipe(dest('dist/images'))
+  .pipe(browserSync.stream());
+
+const resources = () => src('src/resources/**')
+  .pipe(dest('dist'));
+
+const scripts = () => src([
+  'node_modules/slick-carousel/slick/slick.js',
+  'src/js/components/**/*.js',
+  'src/js/main.js'
+])
+  .pipe(babel({
+    presets: ['@babel/env']
+  }))
+  .pipe(concat('app.js'))
+  .pipe(uglify(/*{
+    toplevel: true,
+  }*/).on('error', notify.onError()))
+  .pipe(dest('dist'))
+  .pipe(browserSync.stream());
+
+const images = () => src([
+  'src/images/**/*.jpg',
+  'src/images/**/*.jpeg',
+  'src/images/**/*.png',
+  'src/images/**/*.svg',
+])
+  .pipe(image())
+  .pipe(dest('dist/images'))
+  .pipe(browserSync.stream());
+
+const watchFile = () => {
+  browserSync.init({
+    server: {
+      baseDir: 'dist',
+    }
+  })
 }
 
-//Создаем таск (задачу) для стилей
-//Объединяет все стили в один файл
+watch('src/js/**/*.js', scripts);
+watch('src/resources/**', resources);
+watch('src/**/*.html', htmlMinify);
+watch('src/style/**/*.css', styles);
+watch('src/images/svg/**/*.svg', svgSprites);
+watch([
+  'src/images/**/*.jpg',
+  'src/images/**/*.jpeg',
+  'src/images/**/*.png',
+  'src/images/**/*.svg',
+], images);
 
-const mystyles = ()=>{
-    return src('src/style/**/*.css')
-    .pipe(sourceMaps.init())
-    .pipe(concat('style.css'))
-    .pipe(autoprefixer("last 5 versions"))
-    .pipe(cleanCSS({level:2}))
-    .pipe(sourceMaps.write())
-    .pipe(dest('dist'))
-    .pipe(browserSync.stream())
-
-}
-
-//Экспортируем таски (задачи)
-
-exports.mystyles = mystyles;
-
-//Создаем такс для HTML
-
-const htmlMinify = () => {
-    return src('src/**/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(dest('dist'))
-    .pipe(browserSync.stream())
-}
-
-const svgSprites = () => {
-    return src('src/images/svg/**/*.svg')
-    .pipe(svgSprite({
-        mode:{
-            stack:{
-                sprite: '../sprite.svg'
-            }
-        }
-    
-
-    }))
-    .pipe(dest('dist/images'))
-    .pipe(browserSync.stream());
-
-
-}
-const images = () => {
-    return src([
-        'src/images/**/*.jpg',
-        'src/images/**/*.jpeg',
-        'src/images/**/*.png',
-        'src/images/*.svg'
-    ])
-    .pipe(image())
-    .pipe(dest('dist/images'))
-    .pipe(browserSync.stream())
-
-}
-const scripts = () =>{
-    return src([
-        'src/js/components/**/*.js',
-        'src/js/main.js'
-    ])
-    .pipe(sourceMaps.init())
-    .pipe(babel({
-        presets:['@babel/env']
-    }))
-    .pipe(concat('app.js'))
-    .pipe(uglify({
-        toplevel:true
-    }).on('error',notify.onError()))
-    .pipe(sourceMaps.write())
-    .pipe(dest('dist'))
-    .pipe(browserSync.stream())
-}
-
-const resources = () =>{
-    return src('src/resources/**')
-        .pipe(dest('dist'))
-}
-
-const watchFile =()=>{
-    browserSync.init({
-        server:{
-            baseDir:"dist"
-        }
-        
-    });
-    watch("src/**/*.html",htmlMinify);
-    watch('src/images/svg/**/*.svg',svgSprites);
-    watch([
-        'src/images/**/*.jpg',
-        'src/images/**/*.jpeg',
-        'src/images/**/*.png',
-        'src/images/*.svg'
-    ],images);
-    watch('src/style/**/*.css',mystyles);
-    watch('src/js/**/*.js',scripts);
-    watch('src/resources/**',resources);
-    watch([
-        'src/image/**/*.jpg',
-        'src/image/**/*.jpeg',
-        'src/image/**/*.png',
-        'src/image/*.svg'
-    ],images);
-}
-//Экспортируем таски
-exports.clean = clean;
-exports.resources = resources;
-exports.scripts = scripts;
+// экспорт таксов
+exports.styles = styles;
 exports.html = htmlMinify;
-exports.default = series(clean,mystyles,htmlMinify,svgSprites,images,scripts,resources,watchFile) ;
+exports.scripts = scripts;
+exports.clean = clean;
 
+exports.default = series(clean, styles, htmlMinify, svgSprites, images, scripts, resources, watchFile);
