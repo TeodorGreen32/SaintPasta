@@ -1,5 +1,6 @@
 
 footer{
+    position: relative;
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(89.57deg, rgba(0, 0, 0, 0.72) 2.28%, rgba(0, 0, 0, 0) 76.28%) ,url("images/footer-mainBG.png") , linear-gradient(89.84deg, #2D3134 53.99%, rgba(38, 43, 47, 0.58) 84.44%);
@@ -150,13 +151,14 @@ footer{
    
 }
 .footer-cont-menu .contact{
-   display: flex;
-    justify-content: space-between;
-    gap: 60px;
+   
     margin: 25px;
 }
-.footer-cont-menu .contact div div{
-    color: white;
+.contact-menu-list{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    color: rgb(255, 255, 255);
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -164,18 +166,31 @@ footer{
 
     transition: 0.250s ease;
 }
-.footer-cont-menu .contact .psevdo::after{
-    content: '';
-    position:absolute;
-    width:max-content;
-    height: 1px;
-    background-color: red;
-    
-    
-   
+.contact .menu__item{
+    position: relative;
 }
-.footer-cont-menu .contact div:hover{
+.contact .menu__item::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color: #D38B13;
+    height: 1px;
+    width: 0%;
+    transition: 0.2s ease;
+    transform: translateX(-50%);
+}
+.contact .menu__item:hover::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background-color: #D38B13;
+    height: 1px;
+    width: 100%;
+}
+.contact .menu__item:hover{
     color: #D38B13;
+    
 }
 
 .footer-cont-menu .callback{
