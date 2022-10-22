@@ -1,0 +1,61 @@
+.sec_7{
+    margin: 0 auto;
+    background-image:  url(images/sec_7Pod.png),url(images/sec_7macaroni.png),url(images/sec_7BG.png);
+    background-position: left  top,right ,center;
+    background-size: 760px,500px,auto;
+    background-repeat: no-repeat,no-repeat,no-repeat;
+    max-width: 1920px;
+    max-height: 600px;
+}
+.sec_7 .container{
+   display: flex;
+   
+
+}
+.sec_7 .blockimg img{
+    transform: translate(-100px);
+}
+.info h3{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 168.4%;
+    color: #2F2F2F;
+}
+.sec_7 .blockimg {
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: max-content;
+    
+}
+.sec_7 .info {
+    
+    gap: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    max-width: max-content;
+    
+}
+.sec_7 .info-main{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.sec_7 .info .block{
+    display: flex;
+    gap: 30px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 168.4%;
+    color: #000000;
+}
+.sec_7 .info .line{
+    border: 1px solid #EBC79E;
+    min-width: 460px;
+    transform: translate(-10px);
+}
