@@ -149,17 +149,33 @@ footer{
    
    
 }
-.footer-cont-menu .contact div{
-    display:inline-flex;
-    
-    
+.footer-cont-menu .contact{
+   display: flex;
+    justify-content: space-between;
+    gap: 60px;
     margin: 25px;
-    
+}
+.footer-cont-menu .contact div div{
     color: white;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
+
+    transition: 0.250s ease;
+}
+.footer-cont-menu .contact .psevdo::after{
+    content: '';
+    position:absolute;
+    width:max-content;
+    height: 1px;
+    background-color: red;
+    
+    
+   
+}
+.footer-cont-menu .contact div:hover{
+    color: #D38B13;
 }
 
 .footer-cont-menu .callback{
