@@ -167,10 +167,10 @@ footer{
 
     transition: 0.250s ease;
 }
-.contact .menu__item{
+.contact .menu_item{
     position: relative;
 }
-.contact .menu__item::before{
+.contact .menu_item::before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -181,7 +181,7 @@ footer{
     transition: 0.2s ease;
     transform: translateX(-50%);
 }
-.contact .menu__item:hover::before{
+.contact .menu_item:hover::before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -189,7 +189,7 @@ footer{
     height: 1px;
     width: 100%;
 }
-.contact .menu__item:hover{
+.contact .menu_item:hover{
     color: #D38B13;
     
 }
