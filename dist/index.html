@@ -14,7 +14,7 @@
   <script defer="defer" src="app.js"></script>
 </head>
 
-<body>
+<body class="body">
   <header class="header">
     <div class="container">
       <div class="header__inner">
@@ -34,6 +34,11 @@
           <p class="header__phone-number">+7 905 222 42 32</p>
           <p class="header__phone-text">Заказать звонок</p>
         </a>
+        <div class="menu-burger">
+          <div class="menu-burger__line"></div>
+          <div class="menu-burger__line"></div>
+          <div class="menu-burger__line"></div>
+        </div>
       </div>
     </div>
   </header>
@@ -55,7 +60,9 @@
     <section class="pasta">
       <div class="container">
         <div class="pasta__inner">
-          <img class="pasta__img" src="images/content/pasta/pasta.jpg" alt="pasta">
+          <div class="pasta__img-wrapper">
+            <img class="pasta__img" src="images/content/pasta/pasta.jpg" alt="pasta">
+          </div>
           <div class="pasta__text">
             <h2 class="pasta__title title">
               Свежая паста ручной работы
@@ -69,6 +76,7 @@
         </div>
       </div>
     </section>
+
     <section class="team">
       <div class="container">
         <div class="team__inner">
@@ -126,20 +134,18 @@
                   </div>
                   <div class="team-slider__text">
                     <h3 class="team-slider__title title">
-                      Евгений Мальцев
+                      Иван Иванов
                     </h3>
                     <p class="team-slider__subtitle">
                       Бренд-шеф
                     </p>
                     <p class="team-slider__description">
-                      Безумно любит своё дело. Каждый день он замешивает свежее тесто и заготавливает лучшие начинки для
-                      создания той самой
-                      итальянской классики.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem explicabo tenetur ad ratione
+                      facilis officia obcaecati rerum temporibus ex cum.
+
                     </p>
                     <p class="team-slider__description">
-                      Каждый понедельник Евгений представляет экспериментальную пасту недели, вкус которой не станет
-                      серийным. Следите за
-                      новостями, успейте попробовать.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, magni.
                     </p>
                   </div>
                 </div>
@@ -151,36 +157,36 @@
                   </div>
                   <div class="team-slider__text">
                     <h3 class="team-slider__title title">
-                      Евгений Мальцев
+                      Антон Антонов
                     </h3>
                     <p class="team-slider__subtitle">
                       Бренд-шеф
                     </p>
                     <p class="team-slider__description">
-                      Безумно любит своё дело. Каждый день он замешивает свежее тесто и заготавливает лучшие начинки для
-                      создания той самой
-                      итальянской классики.
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum quam in nulla. Delectus ad magni,
+                      fugit quo veritatis itaque repellendus quod maxime porro earum illo. Dolores voluptatum sit velit
+                      sunt!
                     </p>
                     <p class="team-slider__description">
-                      Каждый понедельник Евгений представляет экспериментальную пасту недели, вкус которой не станет
-                      серийным. Следите за
-                      новостями, успейте попробовать.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, nihil.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="team-slider__arrows">
-              <button class="team-slider__arrow team-slider__arrow-left">
-                <svg class="team-slider__arrow-svg" width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.07146 0.785645L1.85718 3.99993L5.07146 7.21422" stroke="black" stroke-width="1.60714"/>
-                </svg>
-              </button>
-              <button class="team-slider__arrow team-slider__arrow-right">
-                <svg class="team-slider__arrow-svg" width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.785714 7.21436L4 4.00007L0.785714 0.785784" stroke="black" stroke-width="1.60714"/>
-                </svg>
-              </button>
+            <div class="team-slider__arrows-wrapper">
+              <div class="team-slider__arrows">
+                <button class="team-slider__arrow team-slider__arrow-left">
+                  <svg class="team-slider__arrow-svg" width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.07146 0.785645L1.85718 3.99993L5.07146 7.21422" stroke="black" stroke-width="1.60714"/>
+                  </svg>
+                </button>
+                <button class="team-slider__arrow team-slider__arrow-right">
+                  <svg class="team-slider__arrow-svg" width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.785714 7.21436L4 4.00007L0.785714 0.785784" stroke="black" stroke-width="1.60714"/>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -4,6 +4,22 @@
   position: absolute;
   width: 100%;
   z-index: 50;
+  transition: .2s;
+}
+
+@keyframes headerSticky {
+  from {
+    top: -72px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+.header--sticky {
+  animation: headerSticky .2s;
+  position: fixed;
 }
 
 .header__inner {
@@ -19,7 +35,7 @@
 
 .menu__list {
   display: flex;
-  margin: 0 87px 0 67px;
+  margin: 0 40px 0;
 }
 
 .menu__item:hover::before {
@@ -99,4 +115,127 @@
   border-bottom: 1px dashed #1F1F1F;
   line-height: normal;
   transition: .2s;
+}
+
+.menu-burger {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  display: none;
+}
+
+.menu-burger__line {
+  height: 3px;
+  background: #2E2E2E;
+  border-radius: 10px;
+}
+
+@media (max-width:1200px) {
+
+  .body--active {
+    overflow: hidden;
+  }
+
+  .menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background: #EEDEBF;
+    z-index: 15;
+    box-shadow: 0 0 20px rgb(87, 87, 87);
+    overflow: hidden;
+    padding-top: 72px;
+  }
+
+  .header::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100vh;
+    background: #000;
+    opacity: 0;
+    transition: opacity .2s, width 1ms 0.2s;
+  }
+
+  .header--active::before {
+    width: 100%;
+    transition: opacity .2s, width 0s;
+    opacity: .3;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    width: 250px;
+    margin: 0 -250px 0 0;
+    transition: margin-right .2s;
+    border-top: 1px solid #2E2E2E;
+    max-height: 100vh;
+    padding-bottom: 72px;
+    overflow: auto;
+  }
+
+  .menu__list--active {
+    margin-right: 0;
+  }
+
+  .menu__link {
+    padding: 15px 20px;
+    width: 100%;
+    border-bottom: 1px solid #2E2E2E;
+  }
+
+  .menu__item+.menu__item {
+    margin: 0;
+  }
+
+  .header__phone-wrapper {
+    margin-left: auto;
+    margin-right: 50px;
+  }
+
+  .menu-burger {
+    display: flex;
+    cursor: pointer;
+    z-index: 50;
+  }
+
+}
+
+@media (max-width:600px) {
+
+  .header__phone-wrapper {
+    position: absolute;
+    margin-right: 0;
+    right: 35px;
+    top: -40px;
+    opacity: 0;
+    padding: 0 18px 0 28px;
+    z-index: 50;
+    align-items: center;
+    transition: .2s;
+  }
+
+  .header__phone-wrapper--active {
+    top: 72px;
+    opacity: 1;
+    transition: .2s .2s;
+  }
+
+  .menu {
+    padding-top: 135px;
+  }
+
+  .menu__list {
+    padding-bottom: 135px;
+  }
+
+  .header__logo {
+    width: 130px;
+    height: 20px;
+  }
+
 }

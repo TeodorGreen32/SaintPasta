@@ -55,12 +55,11 @@
 
 .team-slider__item-inner {
   display: flex;
-  align-items: stretch;
-  min-height: 400px;
 }
 
 .team-slider__img-wrapper {
   flex: 0 1 430px;
+  height: 400px;
   margin-right: 30px;
 }
 
@@ -70,10 +69,11 @@
   object-fit: cover;
   object-position: center;
   line-height: 0;
+  display: inline-block;
 }
 
 .team-slider__text {
-  max-width: 505px;
+  flex: 0 0 505px;
   padding: 75px 0 50px;
   line-height: 26px;
 }
@@ -98,17 +98,32 @@
   margin-top: 10px;
 }
 
-.team-slider__arrows {
+.team-slider__arrows-wrapper {
   position: absolute;
-  left: 51%;
-  display: flex;
   bottom: 0;
+  width: 100%;
+  padding-left: 150px;
+}
+
+.team-slider__arrows {
+  display: flex;
+}
+
+.team-slider__arrows::before {
+  content: '';
+  flex: 0 1 430px;
+  margin-right: 30px;
+}
+
+.team-slider__arrows::after {
+  content: '';
+  flex: 0 0 431px;
 }
 
 .team-slider__arrow {
   border-radius: 50%;
-  width: 30px;
   height: 30px;
+  flex: 0 0 30px;
   border: 1px solid #000;
   display: flex;
   justify-content: center;
@@ -132,4 +147,82 @@
 
 .team-slider__arrow:hover path {
   stroke: #ECDCBD;
+}
+
+@media (max-width:1080px) {
+  .team-slider__min {
+    display: none;
+  }
+
+  .team-slider__main-box,
+  .team-slider__arrows-wrapper {
+    padding-left: 0;
+  }
+
+  .team {
+    padding: 90px 0;
+  }
+}
+
+@media (max-width:880px) {
+  .team-slider__item-inner {
+    display: block;
+  }
+
+  .team-slider__img-wrapper {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .team-slider__arrows::after,
+  .team-slider__arrows::before {
+    display: none;
+  }
+
+  .team-slider__arrows-wrapper {
+    padding-left: 0;
+    position: static;
+  }
+
+  .team-slider__arrows {
+    justify-content: center;
+  }
+
+  .team-slider__arrow {
+    height: 53px;
+    flex-basis: 53px;
+  }
+
+  .team-slider__arrow+.team-slider__arrow {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width:560px) {
+  .team {
+    padding: 60px 0;
+  }
+
+  .team-slider__text {
+    padding: 40px 20px;
+  }
+
+  .team .slick-list {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .team .slick-slide {
+    width: 100%;
+  }
+
+  .team-slider__img-wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width:460px) {
+  .team-slider__img-wrapper {
+    height: 300px;
+  }
 }
