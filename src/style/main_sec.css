@@ -10,39 +10,58 @@
     /* margin:0 auto; */
     /* width: 1920px;  */
     display: grid;
-    grid-template-columns: repeat(3, 640px);
-    grid-template-rows: repeat(2, 447px);
+    justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(2, 447px);  */
+    width: 100%;
 }
 
 .grid_page1 {
-    grid-column: 1/2;
-    grid-row: 1/2;
+    background: url("../images/1.png") no-repeat center;
+    background-size: cover;
+    height: 450px;
 }
 
 .grid_page2 {
-    grid-column: 2/3;
-    grid-row: 1/2;
+    /* grid-column: 2/3;
+    grid-row: 1/2; */
+    background: url("../images/2.png") no-repeat center;
+    background-size: cover;
+    height: 450px;
+    
 }
 
 .grid_page3 {
-    grid-column: 3/4;
-    grid-row: 1/2;
+    /* grid-column: 3/4;
+    grid-row: 1/2; */
+    background: url("../images/3.png") no-repeat center;
+    background-size: cover;
+    height: 450px;
 }
 
 .grid_page4 {
-    grid-column: 1/2;
-    grid-row: 2/3;
+    /* grid-column: 1/2;
+    grid-row: 2/3; */
+    background: url("../images/4.png") no-repeat center;
+    background-size: cover;
+    height: 450px;
 }
 
 .grid_page5 {
-    grid-column: 2/3;
-    grid-row: 2/3;
+    /* grid-column: 2/3;
+    grid-row: 2/3; */
+    background: url("../images/5.png") no-repeat center;
+    background-size: cover;
+    height: 450px;
 
 }
 
 .grid_page6 {
-    grid-column: 3/4;
-    grid-row: 2/3;
+    /* grid-column: 3/4;
+    grid-row: 2/3; */
+    background: url("../images/6.png") no-repeat center;
+    background-size: cover;
+    height: 450px;
 }
 
 .section_5 {

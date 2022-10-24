@@ -61,7 +61,10 @@
     margin-right: 358px;
     margin-top: -30px;
     opacity: 0;
+    transition: 0.2s ease;
 }
 .sec_8 .container img:hover{
     opacity: 1;
+    transform: scale(101%);
+    
 }
