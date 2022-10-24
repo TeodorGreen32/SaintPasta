@@ -13,6 +13,8 @@ const slickify = function () {
       }
     ]
   });
+
+
 }
 
 $('.team-slider__main-box').slick({
@@ -24,11 +26,14 @@ $('.team-slider__main-box').slick({
   prevArrow: $('.team-slider__arrow-left'),
 });
 
-
 slickify();
+
 $(window).resize(function () {
   const windowWidth = $(window).width();
   if (windowWidth > 1081) {
-    slickify();
+    try {
+      slickify();
+    }
+    catch { }
   }
 });
