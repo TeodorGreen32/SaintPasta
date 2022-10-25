@@ -14,8 +14,8 @@ const toggleBurgerMenu = function () {
 
 menuBurger.addEventListener('click', toggleBurgerMenu);
 
-menuList.addEventListener('click', function (e) {
-  if (!e.target.classList.contains('menu__link')) return;
+header.addEventListener('click', function (e) {
+  if (!e.target.classList.contains('header--active') && !e.target.classList.contains('menu__link')) return;
 
   toggleBurgerMenu();
 })
