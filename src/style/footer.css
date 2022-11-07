@@ -63,10 +63,13 @@ footer{
     font-family: 'Montserrat';
     color: rgb(252, 252, 252);
     background-color: #ffffff00;
-    border: 1px solid rgba(45, 49, 52, 0);
-    border-radius: 5px;
+    border: none;
+    border-radius: 0;
     margin-left: 8px;
     transition: 0.5s ease-in-out;
+    border-bottom:2px solid #ffffff ;
+    width: 400px;
+    padding: 10px 10px;
 }
 .form-footer input:focus{
     outline: none;
@@ -250,4 +253,7 @@ footer{
     font-size: 13px;
     line-height: 19px;
     color: #777E89;
+}
+.local input{
+    border-bottom:1px solid #D38B13 ;
 }

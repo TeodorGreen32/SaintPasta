@@ -30,6 +30,22 @@
     max-width: max-content;
     
 }
+.sec_7 ol{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style-type: none;
+    padding-left: 0;
+    
+}
+.sec_7 ol li{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.sec_7 ol li p{
+    font-size: 25px;
+}
 .sec_7 .info {
     
     gap: 35px;

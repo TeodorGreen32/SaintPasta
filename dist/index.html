@@ -10,7 +10,7 @@
   <script defer="defer" src="lib.js"></script>
   <script defer="defer" src="app.js"></script>
   <script src="https://unpkg.com/imask"></script>
-  <title>Document</title>
+  <title>SaintPasta</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -352,22 +352,25 @@
             </div>
             <div class="info">
                 <h3>Доставка</h3>
-                <div class="info-main">
-                    <div class="block">
-                        <div><b>1</b></div>
-                        <div class="inf"><b>1500 ₽</b> Минимальная сумма заказа</div>
-                    </div>
+                
+                  <ol>
+                  
+                    <li>
+                      <p> <b>1</b> </p>
+                      <div class="inf"><b>1500 ₽</b> Минимальная сумма заказа</div>
+                    </li>
                     <div class="line"></div>
-                    <div class="block">
-                        <div><b>2</b></div>
-                        <div class="inf">Заказы, оформленные <b>до 18:00</b>, доставляем <br> на следующий день. </div>
-                    </div>
+                    <li>
+                      <p> <b>2</b> </p>
+                      <div class="inf">Заказы, оформленные <b>до 18:00</b>, доставляем <br> на следующий день. </div>
+                    </li>
                     <div class="line"></div>
-                    <div class="block">
-                        <div><b>3</b></div>
-                        <div class="inf">Заказы, оформленные <b>после 18:00</b> доставляем <br> через день.</div>
-                    </div>
-                </div>
+                    <li>
+                      <p> <b>3</b> </p>
+                      <div class="inf">Заказы, оформленные <b>после 18:00</b> доставляем <br> через день.</div>
+                    </li>
+                  </ol>
+                
             </div>
             
         </div>
@@ -381,14 +384,16 @@
                     <p>В выделенной зоне происходит доставка</p>
                     <p>Так же вы можете самостоятельно <br> забрать заказ <b>с 13:00 до 22:00</b> <br> в наших барах:</p>
                     <div class="bars">
-                        <svg class="strelka-right-2" viewBox="0 0 9 14" width="6px">
-                            <path class="svg-strelka" d="M6.660,8.922 L6.660,8.922 L2.350,13.408 L0.503,11.486 L4.813,7.000 L0.503,2.515 L2.350,0.592 L8.507,7.000 L6.660,8.922 Z"></path>
-                        </svg>
-                        <p>STEREO pub & pizza <br> на Пискарёвском проспекте, д. 1</p>
-                        <svg class="strelka-right-2" viewBox="0 0 9 14" width="6px">
-                            <path class="svg-strelka" d="M6.660,8.922 L6.660,8.922 L2.350,13.408 L0.503,11.486 L4.813,7.000 L0.503,2.515 L2.350,0.592 L8.507,7.000 L6.660,8.922 Z"></path>
-                        </svg>
-                        <p>ROCKETS & BISHOPS craft beer & burgers <br> на ул. Гороховая, д.26.</p>
+                      <ul>
+                        <li>
+                          <p>STEREO pub & pizza <br> на Пискарёвском проспекте, д. 1</p>
+                        </li>
+                        <li>
+                          <p>ROCKETS & BISHOPS craft beer & burgers <br> на ул. Гороховая, д.26.</p>
+                        </li>
+                      </ul>
+                        
+                        
                     </div>
                 </div>
             </div>
@@ -404,16 +409,16 @@
                 <label for="">Заполните небольшую форму и наш менеджер <br>свяжется с вами в ближайшее время</label> <br>
                 <div class="local">
                     <input type="text" name="name" id="name" autocomplete="off" value="Имя" onfocus="this.value=''" onblur="this.value=value">
-                    <div class="rectangle"></div>
+                    
                 </div>
                 <div class="local">
                     <p>Телефон</p>
                     <input type="text" name="number" id="selector" autocomplete="off" value="909   ">
-                    <div class="rectangle"></div>
+                    
                 </div>
                 <div class="local">
                     <input type="text" name="email" autocomplete="off" value="Email" onfocus="this.value=''" onblur="this.value=value">
-                    <div class="rectangle"></div>
+                    
                 </div>
                 <input type="submit" class="submitB">
             
@@ -443,13 +448,16 @@
                        
                     <div class="callback">
                         <div class="social">
-                            <img src="images/Footer-VK.png" alt="VK">
-                            <img src="images/Footer-Facebook.png" alt="FaceBook">
-                            <img src="images/Footer-inst.png" alt="Instagram">
-                            <img src="images/Footer-Teleg.png" alt="Telegram">
+                          <a href="#"><img src="images/Footer-VK.png" alt="VK"></a>
+                            <a href=""><img src="images/Footer-Facebook.png" alt="FaceBook"></a>
+                            <a href=""><img src="images/Footer-inst.png" alt="Instagram"></a>
+                            <a href=""><img src="images/Footer-Teleg.png" alt="Telegram"></a>
+                            
+                            
+                            
                         </div>
                         <div class="number">
-                            <p>+7 351 233-06-01</p>
+                            <a href="#">+7 351 233-06-01</a>
                             <button>Обратный звонок</button>
                         </div>
                     </div>
