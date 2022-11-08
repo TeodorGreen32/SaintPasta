@@ -13,34 +13,34 @@
 }
 
 .grid_page1 {
-    background: url("../images/1.png") no-repeat center;
+    background: url("images/1.png") no-repeat center;
     background-size: cover;
     height: 450px;
 }
 .grid_page2 {
-    background: url("../images/2.png") no-repeat center;
+    background: url("images/2.png") no-repeat center;
     background-size: cover;
     height: 450px;
 }
 .grid_page3 {
-    background: url("../images/3.png") no-repeat center;
+    background: url("images/3.png") no-repeat center;
     background-size: cover;
     height: 450px;
 }
 
 .grid_page4 {
-    background: url("../images/4.png") no-repeat center;
+    background: url("images/4.png") no-repeat center;
     background-size: cover;
     height: 450px;
 }
 .grid_page5 {
-    background: url("../images/5.png") no-repeat center;
+    background: url("images/5.png") no-repeat center;
     background-size: cover;
     height: 450px;
 }
 
 .grid_page6 {
-    background: url("../images/6.png") no-repeat center;
+    background: url("images/6.png") no-repeat center;
     background-size: cover;
     height: 450px;
 }

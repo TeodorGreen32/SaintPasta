@@ -33,26 +33,25 @@
 }
 .sec_8 .block .text .bars li::before{
     content: '>';
-    
+    font-family: 'Xanh Mono', monospace;
     position: absolute;
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 500;
    
     display: flex;
     flex-direction: row;
     gap: 30px;
     left: -30px;
-    
 }
 .sec_8 .block .text .bars li:hover::before{
     color: #D38B13;
     
 }
 
-/* .sec_8 .block .text .bars *{
-    margin-top: 20px;
+.sec_8 .block .text .bars{
+    padding-left: 30px;
     
-} */
+}
 .sec_8 .block{
     display: flex;
     flex-direction: column;

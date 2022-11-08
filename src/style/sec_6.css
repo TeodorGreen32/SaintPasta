@@ -1,7 +1,7 @@
 .section_6{
     /* max-width: 1920px; */
     height: 616px;
-    background: url("../images/Group.png") no-repeat right ;
+    background: url("images/Group.png") no-repeat right ;
     background-position: center;
 }
 .section_6 .container{
@@ -43,7 +43,7 @@
 }
 .button_s6{
     border: none;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0);
     color: #AD8442;
     height: 30px;
 }
