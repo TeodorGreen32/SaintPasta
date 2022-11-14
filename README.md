@@ -9,3 +9,4 @@ https://www.figma.com/file/uYHNYq40jGU4Royk3g0kwp/Sant-pasta?node-id=0%3A1
 3)Скворцов Иван ПИ-226
 5.	Используемые технологии
 1)верстка с использованием HTML, CSS, JS, jquery, gulp, imask  
+
