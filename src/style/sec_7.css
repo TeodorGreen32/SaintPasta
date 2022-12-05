@@ -75,3 +75,27 @@
     min-width: 460px;
     transform: translate(-10px);
 }
+@media (max-width:320px) {
+    .sec_7{
+        background: url(images/sec_7BG.png), url(images/sec_7macaroni.png);
+        background-position: center,70px 200px;
+        background-size: auto, 100%;
+        background-repeat: no-repeat,no-repeat;
+    }
+    .sec_7 .container{
+        padding: 0;
+        margin: 0 auto;
+        
+    }
+    .sec_7 .container .info{
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+    .sec_7 .container .info ol{
+        width: 100%;
+        
+        padding: 0;
+    }
+    
+}
