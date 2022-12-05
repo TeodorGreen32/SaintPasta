@@ -86,6 +86,9 @@
     transform: scale(101%);
     
 }
+.sec_8 .map-mobile{
+    display: none;
+}
 @media(max-width:320px){
     .sec_8{
         background: none;
@@ -98,13 +101,10 @@
     .sec_8 .container img{
         
         width: 100%;
-        padding: 122px 65px;
+        
         opacity:1;
         margin: 0 auto;
-        background-image: url(images/sec_8Map.png);
-        /* background-position: 970px 78px; */
-        background-position: -949px 0px;
-        background-repeat: no-repeat;
+        
     }
     .sec_8 .container .block{
         padding: 25px 15px;
@@ -119,5 +119,17 @@
     }
     .sec_8 .container .block .text ul{
         gap: 10px;
+    }
+    .sec_8 .map{
+        display: none;
+        opacity: 0;
+    }
+    .sec_8 .map-mobile{
+        width: 100%;
+        opacity: 1;
+        margin: 0 auto;
+        display: block;
+        
+        
     }
 }
