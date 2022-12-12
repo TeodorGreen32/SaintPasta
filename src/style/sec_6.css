@@ -4,6 +4,9 @@
     background: url("images/Group.png") no-repeat right ;
     background-position: center;
 }
+.s6_background{
+    display: none;
+}
 .section_6 .container{
     display: flex;
     flex-direction: column;
@@ -50,12 +53,36 @@
 .button_s6:hover {
     text-decoration: underline;
 }
-/* .img_div_s6{
-    
-    background-size: cover;
-    width: 1120px;
-    height: 616px; 
-    position:absolute;
-    right: -10%;
-    z-index: 0;
-} */
+@media(max-width:320px){
+    .grid_s6{
+        grid-template-columns:repeat(15,20px) ;
+        grid-template-rows:repeat(50,20px) ;
+    }
+    .p0_s6{
+        grid-column:1/7 ;
+    }
+    .p1_s6{
+        grid-column:1/15 ;
+        grid-row:4/12;
+    }
+    .p2_s6{
+        grid-column:1/15 ;
+        grid-row: 14/20;
+    }
+    .button_div_s6{
+        grid-column:1/15 ;
+        grid-row: 29/31;
+    }
+    .section_6{
+        background: none;
+        height: 100%;
+    }
+    .s6_background{
+        display: block;
+        grid-column:1/15 ;
+        grid-row: 31/40;
+        padding: 0 0;
+
+
+    }
+}
