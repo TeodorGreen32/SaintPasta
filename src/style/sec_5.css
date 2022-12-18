@@ -463,7 +463,12 @@
 }
 
 @media(max-width:320px) {
-
+    .section_5{
+        width: max-content;
+    }
+    .section_5 .container{
+        width: max-content;
+    }
     .last_button{
         display: block;
     }
