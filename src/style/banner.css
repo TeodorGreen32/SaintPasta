@@ -31,6 +31,11 @@
   background: rgba(102, 83, 107, 0.72);
   border-radius: 50%;
   transition: .2s;
+  cursor: pointer;
+}
+
+.banner [role="tab"]:hover {
+  background: #ff511cb8;
 }
 
 .banner .slick-active button {

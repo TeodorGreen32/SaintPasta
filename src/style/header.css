@@ -186,6 +186,12 @@
     padding: 15px 20px;
     width: 100%;
     border-bottom: 1px solid #2E2E2E;
+    transition: color, background, .2s;
+  }
+
+  .menu__link:hover {
+    background: #2E2E2E;
+    color: #EEDEBF;
   }
 
   .menu__item+.menu__item {

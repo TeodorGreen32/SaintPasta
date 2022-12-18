@@ -34,10 +34,16 @@
   object-position: center;
   border: 3px solid transparent;
   transition: .2s;
+  cursor: pointer;
 }
 
 .slick-current .team-slider__min-img {
   border: 3px solid #F9B341;
+}
+
+.team-slider__min-img:hover {
+  border: 6px solid #f5430db8;
+  transform: scale(0.9);
 }
 
 .team .slick-slider {
