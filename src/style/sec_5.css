@@ -463,11 +463,9 @@
 }
 
 @media(max-width:320px) {
+    
     .section_5{
-        width: max-content;
-    }
-    .section_5 .container{
-        width: max-content;
+        max-width: 320px;
     }
     .last_button{
         display: block;
@@ -484,6 +482,7 @@
     .cards_main {
         grid-template-columns: 280px;
         grid-template-rows: 600px 50px;
+        max-width: 320px;
     }
 
     .grid_buttons3 {
